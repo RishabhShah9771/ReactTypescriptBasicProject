@@ -3,9 +3,9 @@ import classes from "./NewTodo.module.css";
 import { ToDoContext } from "../store/TodoContext";
 
 const NewToDo: React.FC = () => {
-// Create a ref to access the value of the input element directly.
-// The generic type <HTMLInputElement> tells TypeScript that this ref will point to an input element.
-// Initial value is null because the input is not rendered yet.
+  // Create a ref to access the value of the input element directly.
+  // The generic type <HTMLInputElement> tells TypeScript that this ref will point to an input element.
+  // Initial value is null because the input is not rendered yet.
   const toDoTextInputRef = useRef<HTMLInputElement>(null);
   const todoCtx = useContext(ToDoContext);
 
@@ -31,11 +31,13 @@ const NewToDo: React.FC = () => {
     // Form for adding a new ToDo item.
     // Uses CSS module for styling.
     <form onSubmit={onSubmitHandler} className={classes.form}>
-      <label htmlFor="text">ToDo Text</label>
+      <label htmlFor="text">
+        ADD ITEMS TO THE LIST THAT NEEDS TO BE DONE..
+      </label>
       {/* Input field for entering the ToDo text. Ref is attached for direct access. */}
       <input type="text" id="text" ref={toDoTextInputRef} />
       {/* Button to submit the form and add the ToDo item. */}
-      <button>Add ToDo</button>
+      <button>ADD ITEMS</button>
     </form>
   );
 };
